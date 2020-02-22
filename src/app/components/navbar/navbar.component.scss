@@ -1,0 +1,19 @@
+@import "../../../assets/styles/colors";
+
+.container {
+  background-color: $primary-color;
+  width: 100%;
+
+  .navbar {
+    padding: 1.25rem 2.25rem;
+    display: flex;
+    align-items: center;
+
+    .navbar-logo {
+    }
+
+    .search-container {
+      margin: 0 1rem;
+    }
+  }
+}
