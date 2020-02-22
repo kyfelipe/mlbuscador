@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SearchResultRoutingModule } from './search-result-routing.module';
 import { SearchResultComponent } from "./search-result.component";
 import {NavbarModule} from "../../components/navbar/navbar.module";
+import {CardModule} from "../../components/card/card.module";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {NavbarModule} from "../../components/navbar/navbar.module";
   imports: [
     CommonModule,
     SearchResultRoutingModule,
-    NavbarModule
+    NavbarModule,
+    CardModule
   ]
 })
 export class SearchResultModule { }
