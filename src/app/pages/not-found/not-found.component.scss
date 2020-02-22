@@ -1,0 +1,45 @@
+@import "../../../assets/styles/colors";
+
+.container-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: 100vw;
+  height: 100vh;
+
+  .text-center {
+    text-align: center;
+  }
+
+  .bg-404 {
+    background-image: url("src/assets/images/404.gif");
+    height: 500px;
+    width: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
+  .text-box {
+    .link-back-init {
+      cursor: pointer;
+      color: black;
+      padding: 10px 20px;
+      background: $primary-color;
+      margin: 20px 0;
+      display: inline-block;
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    }
+  }
+}
+
+
+
+
+
+
+
