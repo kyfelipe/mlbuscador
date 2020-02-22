@@ -1,0 +1,21 @@
+.background {
+  background-color: #FBFF4D;
+  color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .search-box {
+    cursor: text;
+    background-color: white;
+    position: relative;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 1.5rem; // 22px
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    height: 3rem; // 44px
+    width: 540px;
+  }
+}
