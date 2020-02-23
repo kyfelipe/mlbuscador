@@ -1,10 +1,10 @@
 @import "../../../assets/styles/colors";
 
-.container {
+.navbar-container {
   background-color: $primary-color;
   width: 100%;
 
-  .navbar {
+  .navbar-content {
     padding: 1.25rem 2.25rem;
     display: flex;
     align-items: center;

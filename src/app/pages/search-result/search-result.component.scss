@@ -18,4 +18,9 @@
       font-weight: 300;
     }
   }
+
+  .search-result-content {
+    display: flex;
+    justify-content: space-around;
+  }
 }

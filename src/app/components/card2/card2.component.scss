@@ -5,9 +5,9 @@ a {
   text-decoration: none;
 }
 
-.card {
-  width: 25%;
-  height: 654px;
+.result-card {
+  width: 25rem;
+  height: 40rem;
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -37,13 +37,14 @@ a {
         align-items: center;
 
         .title {
+          font-size: 1.5rem;
           font-weight: 500;
         }
 
         .rate {
           float: left;
           height: 46px;
-          padding: 8px 0 0 0;
+          padding: 9px 0 0 0;
 
           &:not(:checked) > input {
             position: absolute;
@@ -56,7 +57,7 @@ a {
             overflow: hidden;
             white-space: nowrap;
             cursor: pointer;
-            font-size: 30px;
+            font-size: 21px;
             color: #ccc;
           }
 
