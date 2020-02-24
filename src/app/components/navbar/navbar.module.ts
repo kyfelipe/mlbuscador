@@ -5,12 +5,12 @@ import {SearchBarModule} from "../search-bar/search-bar.module";
 
 @NgModule({
   declarations: [NavbarComponent],
-  exports: [
-    NavbarComponent
-  ],
   imports: [
     CommonModule,
     SearchBarModule
+  ],
+  exports: [
+    NavbarComponent
   ]
 })
 export class NavbarModule { }

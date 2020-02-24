@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {SearchBarComponent} from "./search-bar.component";
+import { ButtonComponent } from './button.component';
 
 @NgModule({
-  declarations: [SearchBarComponent],
+  declarations: [ ButtonComponent ],
   imports: [
     CommonModule
   ],
   exports: [
-    SearchBarComponent
+    ButtonComponent
   ]
 })
-export class SearchBarModule { }
+export class ButtonModule { }
