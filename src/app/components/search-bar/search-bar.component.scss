@@ -10,7 +10,7 @@
   cursor: text;
   background-color: white;
   position: relative;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+  //box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
   @include search-default;
 
   .search-icon {
@@ -36,8 +36,11 @@
     margin: 0;
     border: none;
     @include search-default;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .08);
+    transition: box-shadow 0.4s;
 
     &:focus {
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
       outline: none;
     }
   }

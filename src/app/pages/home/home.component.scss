@@ -14,21 +14,37 @@
 
   .background-circle {
     position: absolute;
-    width: 45rem;
-    height: 45rem;
-    background-color: $primary-color;
+    width: 43rem;
+    height: 43rem;
+    background-color: rgba($primary-color, .97);
+    box-shadow: 0 10px 34px 0 rgba(black, 0.50);
+    border-radius: 100%;
+  }
+
+  .background-circle-border {
+    position: absolute;
+    width: 43rem;
+    height: 43rem;
+    border: 2rem rgba($secundary-color, .15) solid;
     border-radius: 100%;
   }
 
   .content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 1;
 
     .logo {
-      color: black;
+      position: absolute;
+      bottom: 4.5rem;
+      left: 6.2rem;
 
+      img {
+        width: 110%;
+        height: auto;
+      }
     }
   }
 }
