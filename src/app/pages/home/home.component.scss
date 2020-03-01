@@ -1,50 +1,48 @@
 @import "../../../assets/styles/colors";
 
-.background {
-  background-image: url("src/assets/images/background-home.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: #000;
+.home {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  .background-circle {
-    position: absolute;
-    width: 43rem;
-    height: 43rem;
-    background-color: rgba($primary-color, .97);
-    box-shadow: 0 10px 34px 0 rgba(black, 0.50);
-    border-radius: 100%;
-  }
-
-  .background-circle-border {
-    position: absolute;
-    width: 43rem;
-    height: 43rem;
-    border: 2rem rgba($secundary-color, .15) solid;
-    border-radius: 100%;
-  }
-
-  .content {
-    position: relative;
+  .container.logo-wrapper {
     display: flex;
-    flex-direction: column;
+    justify-content: start;
     align-items: center;
-    z-index: 1;
+    padding: 1.5rem 0;
 
     .logo {
-      position: absolute;
-      bottom: 4.5rem;
-      left: 6.2rem;
-
       img {
-        width: 110%;
+        width: 60%;
         height: auto;
       }
+    }
+  }
+
+  .container.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    height: 29rem;
+
+    .art {
+      bottom: 15rem;
+      right: 0;
+      background-image: url("src/assets/images/background.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 45rem;
+      height: 25rem;
+      z-index: 1;
+    }
+
+    .content {
+      position: absolute;
+      bottom: 0;
+      padding: 4rem 1rem 1rem;
+      background-color: #CCE2FF;
+      border-radius: 32px;
     }
   }
 }

@@ -12,6 +12,7 @@
   position: relative;
   //box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
   @include search-default;
+  z-index: 9;
 
   .search-icon {
     mask-size: 20px;
@@ -24,7 +25,8 @@
     position: absolute;
     width: 24px;
     background-color: rgb(117, 117, 117);
-    z-index: 1;
+    z-index: 10;
+    cursor: default;
   }
 
   input {
