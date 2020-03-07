@@ -2,23 +2,24 @@
 
 .search-result-container {
   background-color: white;
+  margin-top: 2rem;
 
-  .search-result-header {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-
-    .title {
-      font-size: 3em;
-      font-weight: 500;
-    }
-
-    .subtitle {
-      font-size: 1em;
-      font-weight: 300;
-    }
-  }
+  //.search-result-header {
+  //  display: flex;
+  //  flex-direction: column;
+  //  margin-top: 1rem;
+  //  margin-bottom: 1.5rem;
+  //
+  //  .title {
+  //    font-size: 3em;
+  //    font-weight: 500;
+  //  }
+  //
+  //  .subtitle {
+  //    font-size: 1em;
+  //    font-weight: 300;
+  //  }
+  //}
 
   .search-result-content {
     display: flex;

@@ -1,10 +1,17 @@
 <div class="navbar-container">
   <div class="container navbar-content">
-    <div class="navbar-logo">
-      <img src="../../../assets/images/logo.svg" style="width: auto;height: 3rem">
+    <div class="search-content">
+      <div class="navbar-logo">
+        <img src="../../../assets/images/simple-logo.svg" alt="Logo simples do motor de busca" [routerLink]="'/'">
+      </div>
+      <div class="search">
+        <mlb-search-bar></mlb-search-bar>
+      </div>
     </div>
-    <div class="search-container">
-      <mlb-search-bar></mlb-search-bar>
+
+    <div class="result-header">
+      <span class="title">Os melhores produtos para você!</span>
+      <span class="subtitle">Busca otimizada para o cep <i>24456-422</i></span>
     </div>
   </div>
 </div>

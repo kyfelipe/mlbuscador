@@ -1,22 +1,61 @@
 @import "../../../assets/styles/colors";
 
 .navbar-container {
-  background-color: $primary-color;
   width: 100%;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .17);
+  //box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .17);
+  border-bottom: $primary-color 2px solid;
 
   .navbar-content {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    .navbar-logo {
-      margin-right: 2rem;
+    div.search-content {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+
+      .navbar-logo {
+        margin-left: 1.1rem;
+        margin-right: .3rem;
+
+        img {
+          width: auto;
+          height: 3rem;
+          user-select: none;
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .search {
+        margin: 0 1rem;
+      }
     }
 
-    .search-container {
-      margin: 0 1rem;
+    .result-header {
+      display: flex;
+      flex-direction: column;
+      margin-right: 1.1rem;
+      text-align: right;
+      user-select: none;
+      cursor: default;
+
+      .title {
+        font-size: 1.25em;
+        line-height: 1;
+        font-weight: 500;
+      }
+
+      .subtitle {
+        font-size: .9em;
+        font-weight: 300;
+      }
     }
   }
 }
