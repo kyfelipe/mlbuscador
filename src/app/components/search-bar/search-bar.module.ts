@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {SearchBarComponent} from "./search-bar.component";
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [SearchBarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     SearchBarComponent

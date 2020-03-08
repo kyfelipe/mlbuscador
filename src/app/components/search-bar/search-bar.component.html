@@ -1,4 +1,4 @@
-<div class="search-box">
+<form class="search-box" [formGroup]="search" (ngSubmit)="searchProduct()">
   <div class="search-icon"></div>
-  <input autocomplete="off" tabindex="-1" aria-hidden="true" placeholder="Buscar">
-</div>
+  <input autocomplete="off" tabindex="-1" aria-hidden="true" placeholder="Buscar" formControlName="content">
+</form>
