@@ -1,121 +1,146 @@
 @import "../../../assets/styles/colors";
 
 .result-card {
-  width: 21rem;
-  height: 38rem;
+  width: 16.5rem;
+  height: 33.5rem;
   background: #fff;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 88px 0 rgba(0, 0, 0, 0.1607843137254902);
+  //box-shadow: 0 0 88px 0 rgba(0, 0, 0, 0.1607843137254902);
+  border: $second-color 2px solid;
+  border-radius: 5px;
   overflow: hidden;
   margin-bottom: 2rem;
 
-  .thumb {
+  .result-card-thumb {
     position: relative;
     height: 50%;
-    box-shadow: 0 0 130px 0 rgba(0, 0, 0, 0.2);
+    //box-shadow: 0 0 130px 0 rgba(0, 0, 0, 0.2);
     background-image: url("src/assets/images/notebook.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
 
-  .content {
+  .result-card-content {
     flex: 1;
-    padding: 0 2em 1em;
+    padding: 0 1rem 1rem;
 
-    .header {
-      .row-wrapper {
+    .container-values {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 0 0;
+
+      .value-icon {
+        margin-top: .3rem;
+        margin-right: .5rem;
+        fill: rgba(0, 0, 0, .8);
+      }
+
+      .content {
         display: flex;
-        padding: 0.55em 0 0.3em;
-        border-bottom: 1px solid #d8d8d8;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
 
-        .title {
-          font-size: 1.2rem;
+        .value {
+          color: rgba(0, 0, 0, .8);
+          font-size: 1.5rem;
           font-weight: 500;
         }
 
-        .rate {
-          float: left;
-          height: 46px;
-          padding: 9px 0 0 0;
-
-          &:not(:checked) > input {
-            position: absolute;
-            top: -9999px;
-          }
-
-          &:not(:checked) > label {
-            float: right;
-            width: 1em;
-            overflow: hidden;
-            white-space: nowrap;
-            cursor: pointer;
-            font-size: 18px;
-            color: #ccc;
-          }
-
-          &:not(:checked) > label:before {
-            content: '★ ';
-          }
-
-          & > input:checked ~ label {
-            color: #3582F4;
-          }
-
-          &:not(:checked) > label:hover,
-          &:not(:checked) > label:hover ~ label {
-            color: #462BFA;
-          }
-
-          & > input:checked + label:hover,
-          & > input:checked + label:hover ~ label,
-          & > input:checked ~ label:hover,
-          & > input:checked ~ label:hover ~ label,
-          & > label:hover ~ input:checked ~ label {
-            color: #263FDE;
-          }
+        .value-parceled {
+          color: $money-color;
+          font-size: .8rem;
+          margin-bottom: 1rem;
         }
       }
 
-      .details {
-        display: flex;
-        margin: 0.5rem 0;
-        justify-content: space-between;
-        align-items: flex-end;
+      //.freight {
+      //  color: $money-color;
+      //  font-size: .8rem;
+      //  margin-bottom: 1rem;
+      //}
+    }
 
-        .recipe-value {
-          display: flex;
-          flex-direction: column;
+    .container-freight {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 0 0;
 
-          .value {
-            color: black;
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin: 1rem 1rem 0 0;
-          }
+      .freight-icon {
+        margin-right: .5rem;
+        fill: $money-color;
+      }
 
-          .value-parceled {
-            color: $money-color;
-            font-size: .9rem;
-            margin-bottom: 1rem;
-          }
+      .freight-time {
+        color: $money-color;
+        font-size: .9rem;
+      }
+    }
+
+    .row-wrapper {
+      display: flex;
+      //padding: 0.55em 0 0.3em;
+      //border-bottom: 1px solid #d8d8d8;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .rate {
+        float: left;
+        height: 46px;
+        padding: 9px 0 0 0;
+
+        &:not(:checked) > input {
+          position: absolute;
+          top: -9999px;
         }
 
-        .freight {
-          color: $money-color;
-          font-size: .9rem;
-          margin-bottom: 1rem;
+        &:not(:checked) > label {
+          float: right;
+          width: 1em;
+          overflow: hidden;
+          white-space: nowrap;
+          cursor: pointer;
+          font-size: 21px;
+          color: #ccc;
+        }
+
+        &:not(:checked) > label:before {
+          content: '★ ';
+        }
+
+        & > input:checked ~ label {
+          color: #3582F4;
+        }
+
+        &:not(:checked) > label:hover,
+        &:not(:checked) > label:hover ~ label {
+          color: #462BFA;
+        }
+
+        & > input:checked + label:hover,
+        & > input:checked + label:hover ~ label,
+        & > input:checked ~ label:hover,
+        & > input:checked ~ label:hover ~ label,
+        & > label:hover ~ input:checked ~ label {
+          color: #263FDE;
         }
       }
     }
 
     .description {
+      margin-top: 1rem;
       font-weight: 300;
       font-size: .9rem;
-      margin: 0.3em 0 1.8em;
+      //margin: 0.3em 0 1.8em;
     }
 
     .footer {
