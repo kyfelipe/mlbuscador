@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'mlb-search-result',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
+  data: any;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.data = this.route.snapshot.data;
+    console.log(this.data);
+  }
 
 }
