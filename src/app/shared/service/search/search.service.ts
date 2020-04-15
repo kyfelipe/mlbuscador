@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from '../../../../environments/environment';
-import { SearchResponse } from '../../model/search-response.model';
+import { SearchResponse } from '../../model/search/search-response.model';
+import { SearchRequest } from '../../model/search/search-request.model';
 
 @Injectable()
 export class SearchService {
@@ -11,9 +12,9 @@ export class SearchService {
 
   constructor(private http: HttpClient) { }
 
-  public search(cep: string, termoBusca: string): Observable<SearchResponse> {
+  public search(request: SearchRequest | any): Observable<SearchResponse> {
     return this.http
-      .post<SearchResponse>(this.url + '/buscaproduto', {cep, termoBusca});
+      .post<SearchResponse>(this.url + '/buscaproduto', request);
       // .pipe(catchError(this.handleError<any>()));
   }
 }

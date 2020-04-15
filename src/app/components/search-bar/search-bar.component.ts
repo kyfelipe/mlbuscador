@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import {SearchRequest} from '../../shared/model/search/search-request.model';
 
 @Component({
   selector: 'mlb-search-bar',
@@ -16,14 +17,24 @@ export class SearchBarComponent implements OnInit {
     this.buildSearchForm();
   }
 
-  private buildSearchForm() {
+  private buildSearchForm(): void {
     this.search = this.formBuilder.group({
       content: ['']
     });
   }
 
-  public searchProduct() {
-    // console.log(this.search.get('content').value);
-    this.router.navigate(['/resultado']);
+  public searchProduct(): void {
+    let content = this.search.get('content').value;
+    const regex = /\d{5}[-]\d{3}|\d{8}/g;
+    const cep = content.match(regex);
+    content = content.replace(cep, '');
+    content = content.replace('  ', ' ');
+
+    const request: SearchRequest = {
+      cep: cep[0],
+      termoBusca: content
+    };
+
+    this.router.navigate(['/resultado'], { queryParams: request });
   }
 }
