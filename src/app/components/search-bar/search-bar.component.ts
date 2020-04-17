@@ -26,10 +26,18 @@ export class SearchBarComponent implements OnInit {
 
   public searchProduct(): void {
     let content = this.search.get('content').value;
-    const regex = /\d{5}[-]\d{3}|\d{8}/g;
-    const cep = content.match(regex);
-    content = content.replace(cep, '');
-    content = content.replace('  ', ' ');
+    let cep: string;
+    const regexFormattedCEP = /\d{5}[-]\d{3}/g;
+    const regexCEP = /\d{8}/g;
+
+    if (content.match(regexCEP)) {
+      const unformattedCEP = content.match(regexCEP)[0];
+      cep = unformattedCEP.slice(0, 5) + '-' + unformattedCEP.slice(5, 8);
+      content = content.replace(unformattedCEP, '');
+    } else {
+      cep = content.match(regexFormattedCEP)[0];
+      content = content.replace(cep, '');
+    }
 
     if (cep === null || cep === 'undefined') {
       this.error = 'Insira um CEP válido';
@@ -37,7 +45,7 @@ export class SearchBarComponent implements OnInit {
     }
 
     const request: SearchRequest = {
-      cep: cep[0],
+      cep,
       termoBusca: content
     };
 
