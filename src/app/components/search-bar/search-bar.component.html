@@ -1,4 +1,15 @@
 <form class="search-box" [formGroup]="search" (ngSubmit)="searchProduct()">
+  <div class="text-error">
+    {{ error }}
+  </div>
   <div class="search-icon"></div>
-  <input autocomplete="off" tabindex="-1" aria-hidden="true" placeholder="Buscar" formControlName="content">
+  <input
+    autofocus
+    (input)="clearError()"
+    autocomplete="off"
+    tabindex="-1"
+    aria-hidden="true"
+    placeholder="Buscar produto"
+    formControlName="content"
+  >
 </form>

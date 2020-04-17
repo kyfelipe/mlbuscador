@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { SearchResponse } from '../../shared/model/search/search-response.model';
 
 @Component({
   selector: 'mlb-search-result',
@@ -6,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
+  public search: SearchResponse;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): void { }
-
+  ngOnInit(): void {
+    this.search = this.route.snapshot.data.search;
+    console.log(this.search);
+  }
 }
