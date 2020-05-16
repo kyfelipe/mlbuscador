@@ -6,7 +6,7 @@
         <svg class="value-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="nonzero" d="M17.8 7.61V5.8a.6.6 0 0 0-.6-.6H2.8a.6.6 0 0 0-.6.6v1.81h15.6zm0 1.2H2.2v5.39a.6.6 0 0 0 .6.6h14.4a.6.6 0 0 0 .6-.6V8.81zM2.8 4h14.4A1.8 1.8 0 0 1 19 5.8v8.4a1.8 1.8 0 0 1-1.8 1.8H2.8A1.8 1.8 0 0 1 1 14.2V5.8A1.8 1.8 0 0 1 2.8 4zm1.195 8.996l.002-1.2 4.204.007-.002 1.2-4.204-.007z"></path></svg>
       </figure>
       <div class="content">
-        <span class="value">R$ 1.199</span>
+        <span class="value">R$ {{ product.preco | currency: 'BRL':'' }}</span>
         <span class="value-parceled">12x R$ 99<sup>92</sup> sem juros</span>
       </div>
     </div>
@@ -17,7 +17,7 @@
       </figure>
       <div class="content">
         <span class="freight-value">Frete grátis</span>
-        <span class="freight-time">Chegará entre os dias <span class="time">12 e 17 de março</span></span>
+        <span class="freight-time">Estimado para chegar <span class="time">{{ product.dataEstimadaEntrega | date: "dd 'de' MMMM" : "GMT -3" }}</span></span>
       </div>
     </div>
 
@@ -26,7 +26,7 @@
         <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M8.246 11L18.246 11 19.675 6 6.428 6z"/><path d="M21,4H5H4H2v2h2h0.3l3.282,9.025C8.011,16.206,9.145,17,10.401,17H19v-2h-8.599c-0.419,0-0.797-0.265-0.94-0.658L8.973,13 h9.273c0.89,0,1.68-0.598,1.923-1.451l1.793-6.274c0.086-0.302,0.025-0.626-0.163-0.877C21.609,4.147,21.313,4,21,4z M18.246,11 h-10L6.428,6h13.247L18.246,11z"/><circle cx="10.5" cy="19.5" r="1.5"/><circle cx="16.5" cy="19.5" r="1.5"/></svg>
       </figure>
       <div class="content">
-        <span class="info">Notebook Positivo Motion Duo 2 Em 1 Intel<small>&copy;</small> Quad<small>&copy;</small> Core</span>
+        <span class="info">{{product.nome}}</span>
         <span class="salesman">Por Positivo</span>
       </div>
     </div>

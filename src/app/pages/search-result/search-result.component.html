@@ -1,11 +1,9 @@
 <mlb-navbar [cep]="search.data.cep" [city]="search.data.cidade"></mlb-navbar>
 <div class="search-result-container">
   <div class="container search-result-content">
-    <mlb-card></mlb-card>
-    <mlb-card></mlb-card>
-    <mlb-card></mlb-card>
-    <mlb-card></mlb-card>
-    <mlb-card></mlb-card>
-    <mlb-card></mlb-card>
+    <mlb-card
+      *ngFor="let item of search.data.produtosIndicados"
+      [product]="item"
+    ></mlb-card>
   </div>
 </div>
