@@ -7,10 +7,15 @@
   display: flex;
   flex-direction: column;
   //box-shadow: 0 0 88px 0 rgba(0, 0, 0, 0.1607843137254902);
-  border: $second-color 2px solid;
+  border: $grey-color 2px solid;
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 2rem;
+
+  &:hover {
+    border: rgba($second-color, .85) 2px solid;
+    box-shadow: 0 1px 6px 0 rgba($second-color, .2);
+  }
 
   .result-card-thumb {
     position: relative;
